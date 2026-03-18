@@ -445,70 +445,39 @@ export default function App() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
-              year: "1971",
-              title: "The Original",
-              desc: "Swoosh with lowercase cursive 'nike' script sitting directly on top. Designed in weeks by Carolyn Davidson.",
-              change: "Birth of the mark",
-              render: (
-                <div className="flex flex-col items-center gap-1">
-                  <NikeSwoosh className="w-28 text-white" />
-                  <span className="text-white text-xs italic font-light tracking-wider" style={{ fontFamily: 'Georgia, serif' }}>nike</span>
-                </div>
-              ),
+              year: "1964",
+              title: "Blue Ribbon Sports",
+              desc: "Before Nike existed, there was Blue Ribbon Sports — the company Phil Knight and Bill Bowerman founded to import Japanese Onitsuka Tiger shoes. The BRS monogram logo reflected a scrappy, athletic startup identity with no hint of what was coming.",
+              change: "Pre-Nike identity",
+              img: "/logo-1964.png",
             },
             {
-              year: "1976",
-              title: "Wordmark Moves Up",
-              desc: "Lowercase cursive replaced with bold geometric uppercase sans-serif. The wordmark now sits above the Swoosh.",
-              change: "More athletic & industrial",
-              render: (
-                <div className="flex flex-col items-center gap-2">
-                  <span className="text-white font-black text-2xl tracking-[0.15em]">NIKE</span>
-                  <NikeSwoosh className="w-28 text-white" />
-                </div>
-              ),
+              year: "1971",
+              title: "The Original Nike",
+              desc: "The very first Nike logo: a hand-drawn cursive 'nike' script intertwined with the brand-new Swoosh. Carolyn Davidson's original design had an organic, hand-crafted feel — far from the precision mark it would become.",
+              change: "Birth of the Swoosh",
+              img: "/logo-1971.png",
             },
             {
               year: "1978",
               title: "Futura Bold",
-              desc: "Swoosh refined to be bolder and thicker. Wordmark adopts a modified Futura Bold typeface — the font that would define Nike for decades.",
+              desc: "The cursive script was replaced with a bold, geometric uppercase 'NIKE' in a modified Futura typeface. The Swoosh was refined and enlarged. The combination of strong typography and the iconic check mark defined Nike's identity for decades.",
               change: "Iconic typeface locked in",
-              render: (
-                <div className="flex flex-col items-center gap-2">
-                  <span className="text-white font-black text-2xl tracking-[0.2em]" style={{ fontWeight: 900 }}>NIKE</span>
-                  <NikeSwoosh className="w-32 text-white" />
-                </div>
-              ),
+              img: "/logo-1978.png",
             },
             {
               year: "1985",
-              title: "The Red Box Era",
-              desc: "White letters and Swoosh set against a vivid red background box. Nike's most colorful era — red communicates energy, urgency, and sport.",
-              change: "Red introduced as accent",
-              render: (
-                <div className="flex items-center gap-3 bg-[#EA553B] px-5 py-3 rounded-lg">
-                  <span className="text-white font-black text-2xl tracking-[0.15em]">NIKE</span>
-                  <NikeSwoosh className="w-16 text-white" style={{ mixBlendMode: 'multiply' }} />
-                </div>
-              ),
+              title: "The Dark Identity",
+              desc: "Nike adopted a high-contrast, white-on-black logo treatment that radiated power and dominance. This era aligned with Nike's aggressive push into basketball and the launch of Air Jordan — a brand that demanded bold, unapologetic visuals.",
+              change: "Power & contrast era",
+              img: "/logo-1985.png",
             },
             {
               year: "1995",
-              title: "Wordmark Dropped",
-              desc: "The Swoosh becomes so globally recognized that Nike permanently removes the wordmark. The shape alone is enough.",
+              title: "Swoosh Alone — Forever",
+              desc: "Nike permanently retired the wordmark. The Swoosh alone was enough — recognized in over 170 countries without a single letter. Joining Apple and McDonald's in the rarest tier of brands, the mark became a cultural symbol beyond sport.",
               change: "Symbol-only status achieved",
-              render: (
-                <NikeSwoosh className="w-36 text-white" />
-              ),
-            },
-            {
-              year: "Today",
-              title: "The Modern Mark",
-              desc: "Unchanged since 1995. The Swoosh scales from 5mm shoe embroidery to a 100-foot stadium banner. One of the most recognized symbols on Earth.",
-              change: "Timeless & global",
-              render: (
-                <NikeSwoosh className="w-36 text-white drop-shadow-[0_0_20px_rgba(234,85,59,0.5)]" />
-              ),
+              img: "/logo-1995.png",
             },
           ].map((era, i) => (
             <motion.div
@@ -525,8 +494,8 @@ export default function App() {
                     <span className="text-xs text-neutral-500 uppercase tracking-widest">{era.change}</span>
                   </div>
                   {/* Logo render */}
-                  <div className="flex items-center justify-center h-20 mb-6">
-                    {era.render}
+                  <div className="flex items-center justify-center h-24 mb-6 bg-white rounded-xl p-3">
+                    <img src={era.img} alt={era.title} className="max-h-full max-w-full object-contain" />
                   </div>
                   <h3 className="text-lg font-black text-white mb-2">{era.title}</h3>
                   <p className="text-neutral-400 text-sm leading-relaxed flex-1">{era.desc}</p>
