@@ -104,7 +104,7 @@ export default function App() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2 }}
-            className="flex flex-wrap justify-center gap-8 mt-16"
+            className="flex flex-wrap justify-center gap-8 mt-16 mb-16"
           >
             {[
               { label: "Founded", value: "1964" },
@@ -125,7 +125,7 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.8 }}
-          className="absolute bottom-10 flex flex-col items-center gap-2 text-neutral-600"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-neutral-600"
         >
           <span className="text-xs tracking-widest uppercase">Scroll to explore</span>
           <motion.div animate={{ y: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>
