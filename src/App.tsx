@@ -125,7 +125,7 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.8 }}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-neutral-600"
+          className="absolute bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-neutral-600"
         >
           <span className="text-xs tracking-widest uppercase">Scroll to explore</span>
           <motion.div animate={{ y: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>
